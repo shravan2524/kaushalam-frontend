@@ -61,6 +61,11 @@ function Home() {
       console.error(err);
     }
   };
+  const logout = () => {
+    localStorage.removeItem('user')
+    router.push("/login")
+
+  }
 
   if (loading) return <div className="text-center p-4">Loading products...</div>;
   if (error) return <div className="text-center p-4 text-red-500">{error}</div>;
@@ -75,6 +80,7 @@ function Home() {
             <a href="/home" className="text-white">Home</a>
             <a href="/orders" className="text-white">Orders</a>
             <a href="/cart" className="text-white">Cart</a>
+            <a onClick={logout} className="text-white">Logout</a>
           </div>
         </div>
       </nav>

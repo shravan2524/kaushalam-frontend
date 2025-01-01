@@ -43,7 +43,11 @@ function Cart() {
     }
     
   };
+  const logout = () => {
+    localStorage.removeItem('user')
+    router.push("/login")
 
+  }
   // Proceed to checkout
   const checkout = async () => {
     try {
@@ -82,6 +86,7 @@ function Cart() {
                     <a href="/home" className="text-white">Home</a>
                     <a href="/orders" className="text-white">Orders</a>
                     <a href="/cart" className="text-white">Cart</a>
+                    <a onClick={logout} className="text-white">Logout</a>
                 </div>
             </div>
         </nav>

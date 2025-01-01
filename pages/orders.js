@@ -34,6 +34,11 @@ function Cart() {
         fetchBookings();
     }, []);
     console.log(cartItems)
+    const logout = () => {
+        localStorage.removeItem('user')
+        router.push("/login")
+    
+      }
     return (
         <div className="flex flex-col min-h-screen">
             {/* Navbar */}
@@ -44,6 +49,7 @@ function Cart() {
                         <a href="/home" className="text-white">Home</a>
                         <a href="/orders" className="text-white">Orders</a>
                         <a href="/cart" className="text-white">Cart</a>
+                        <a onClick={logout} className="text-white">Logout</a>
                     </div>
                 </div>
             </nav>
