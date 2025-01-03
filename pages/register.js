@@ -2,6 +2,7 @@
 import { useState } from 'react';
 import { useRouter } from 'next/router';
 import API from '@/axios/api';
+import { toast } from 'react-toastify';
 
 export default function Register() {
   const [username, setUsername] = useState('');
@@ -15,9 +16,12 @@ export default function Register() {
     API.register({username, email, password})
     .then((data)=>{
         console.log(data)
+        toast.success('User registered successfull');
+        router.push('/login')
     })
     .catch((err)=>{
-        console.log(err)
+        console.log(err);
+        toast.success('Something went wrong');
     })
   };
 
