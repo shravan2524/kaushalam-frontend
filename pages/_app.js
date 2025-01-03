@@ -9,7 +9,7 @@ import 'react-toastify/dist/ReactToastify.css';
 export default function App({ Component, pageProps }) {
   const router = useRouter()
   useEffect(() => {
-    router.push("/login")
+    // router.push("/login")
   }, [])
   return<>
   <Component {...pageProps} />
