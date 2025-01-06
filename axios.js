@@ -2,7 +2,7 @@
 import axios from 'axios';
 
 const axiosInstance = axios.create({
-  baseURL: 'https://15ca-2401-4900-8815-1bb5-6485-b26b-162c-dbca.ngrok-free.app/', // Replace with your backend URL
+  baseURL: 'https://6560-2401-4900-8817-7ab0-b85a-236e-c16a-f220.ngrok-free.app', // Replace with your backend URL
 });
 
 axiosInstance.interceptors.request.use(
